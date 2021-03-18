@@ -1,0 +1,22 @@
+<h1> Todos</h1>
+<a href = '/new'><h4> New Todo</h4></a>
+<br>
+<% if(todos.length >0) { %> 
+<% todos.forEach(todo =>{%>
+<h2> <%= todo.title %> </h2>
+<h4> <%= todo.date.toLocaleDateString() %> </h4>
+<h4> <%= todo.date.toLocaleTimeString() %> </h4>
+<h5> <%= todo.status %> </h5>
+<h4> <%= todo.description %> </h4>
+<a href = '/edit/<%= todo.id %>'>Edit</a>
+<a href = '/delete/<%= todo.id %>'> Delete</a>
+<a href = '/complete/<%= todo.id %>'> Complete</a>
+<br>
+<br>
+
+<% }); %>
+<% } else{ %>
+<h2> No todos to view here </h2>
+<% } %>
+
+

@@ -1,0 +1,8 @@
+<h1> Edit TODO</h1>
+<form action="/edit/<%= todo.id %>" method = "post" >
+<input type ="text" name = "title" placeholder="Title" value="<%= todo.title %>">
+<input type ="text" name = "description" placeholder="Description" value="<%= todo.description %>">
+<input type ="datetime-local" name = "date" placeholder="Date and Time">
+<input type="submit" value="Submit">
+</form>
+<a href = '/'> Back</a>
